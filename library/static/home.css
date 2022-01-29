@@ -1,0 +1,33 @@
+body{
+    background-color: white;
+}
+
+.custom-navbar{
+    background-color: #F3A983;
+    border:solid 2px #F3A983;
+}
+.navbar-brand{
+    font-weight: 600;
+    color: #342A3F!important;
+}
+
+.bookform-section input{
+    width: 100%;
+    padding: 7px 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.bookform-section label{
+    color: black;
+    font-weight: 600;
+}
+
+
+.book-form{
+    background-color: #E5E6E4;
+    border-radius: 15px;
+    padding: 10px 25px;
+    margin: 2px;
+}
+

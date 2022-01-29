@@ -1,0 +1,42 @@
+
+
+{% block content  %}
+    <section class="bookslist-section container" >
+        <table class="table" >
+       <thead class="border-bottom font-weight-bold table-dark">
+            <tr>
+               
+                <td>ISBN</td>
+                <td>Title</td>
+                <td>Authors</td>
+                <td>Publisher</td>
+                <td>Price</td>
+                {% if request.user.is_authenticated %}
+                <td></td>
+                <td></td>
+                {% endif %}
+                
+            </tr>
+
+       </thead>
+       <tbody >
+           {% for book in books %}
+            <tr>
+                
+               
+                <td>{{book.isbn}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.authors}}</td>
+                <td>{{book.publisher}}</td>
+                <td>{{book.price}}</td>
+                {% if request.user.is_authenticated %}
+                <td><a href="delete/{{book.auto_id}}">DELETE</a></td>
+                <td><a href="{{book.auto_id}}">EDIT</a></td>
+                {% endif %}
+                
+            </tr>
+           {% endfor %}
+       </tbody>
+       <table>
+    </section>
+{% endblock content %}

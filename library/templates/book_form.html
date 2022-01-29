@@ -1,0 +1,21 @@
+{% extends "dashboard.html" %}
+
+
+{% block content %}
+<section class="bookform-section container">
+
+  <div class="row justify-content-center">
+    <div class='col-md-6 book-form'>
+      <h2 style="text-align: center;">ADD BOOK</h2>
+      <form method="POST">
+
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+    </div>
+  </div>
+
+</section>
+{% endblock content %}
